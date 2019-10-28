@@ -3,7 +3,7 @@ import io.pivotal.pal.tracker.gradlebuild.DependenciesGraphPlugin
 buildscript {
     ext {
         springBootVersion = "2.0.6.RELEASE"
-        springVersion = "5.0.9.RELEASE"
+        springVersion = "5.0.9.RELEASE" // shouldn't this be managed by dependencies transitively pulled with starters?
         mysqlVersion = "8.0.13"
         jacksonVersion = "2.9.7"
         slf4jVersion = "1.7.25"
@@ -14,6 +14,11 @@ buildscript {
         junitVersion = "4.12"
         okhttpVersion = "3.12.0"
         jsonPathVersion = "2.4.0"
+        springCloudVersion = "Finchley.SR4" //2.0.2.RELEASE"
+                // SPRING_CLOUD_VERSION
+        springCloudServicesClientLibrariesVersion = "2.0.3.RELEASE"
+                //SPRING_CLOUD_SERVICES_CLIENT_LIBRARIES_VERSION
+        springCloudCommons = "2.0.0.RELEASE"
     }
 
     repositories {

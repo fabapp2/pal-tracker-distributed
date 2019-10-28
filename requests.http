@@ -4,8 +4,13 @@ Content-Type: application/json
 
 {"name": "Sally"}
 
+
+curl -X POST registration-pal-fkrueger.apps.evans.pal.pivotal.io/registration -d "{\"name\": \"Sally\"}" -H "Content-Type: application/json"
+
 ### Get user
 GET {{registrationUrl}}/users/USER-ID
+
+
 
 ### Get account
 GET {{registrationUrl}}/accounts?ownerId=USER-ID
