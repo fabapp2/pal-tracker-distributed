@@ -1,12 +1,10 @@
 applications:
-- name: tracker-allocations
-  path: ./applications/allocations-server/build/libs/allocations-server.jar
+- name: tracker-service-registry
+  path: platform-services/eureka-server/build/libs/eureka-server.jar
   routes:
-  - route: allocations-pal-fkrueger.apps.evans.pal.pivotal.io
+  - route: tracker-service-registry.apps.evans.pal.pivotal.io
   memory: 1G
   instances: 1
   env:
-#    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-fkrueger.apps.evans.pal.pivotal.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
-  services:
-  - tracker-allocations-database
+
