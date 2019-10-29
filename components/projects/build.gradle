@@ -4,3 +4,9 @@ dependencies {
 
     testCompile project(":components:test-support")
 }
+
+test {
+    filter {
+        includeTestsMatching "*Test"
+    }
+}

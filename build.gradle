@@ -1,5 +1,6 @@
 import io.pivotal.pal.tracker.gradlebuild.DependenciesGraphPlugin
 
+
 buildscript {
     ext {
         springBootVersion = "2.0.6.RELEASE"
@@ -33,6 +34,8 @@ buildscript {
 }
 
 apply plugin: DependenciesGraphPlugin
+
+
 
 subprojects {
     group "io.pivotal.pal.tracker"
