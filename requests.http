@@ -11,9 +11,14 @@ curl -X POST registration-pal-fkrueger.apps.evans.pal.pivotal.io/registration -d
 GET {{registrationUrl}}/users/USER-ID
 
 
+curl registration-pal-fkrueger.apps.evans.pal.pivotal.io/users/1
+
 
 ### Get account
 GET {{registrationUrl}}/accounts?ownerId=USER-ID
+
+
+curl registration-pal-fkrueger.apps.evans.pal.pivotal.io/accounts?ownerId=1
 
 ### Create project
 POST {{registrationUrl}}/projects
@@ -21,14 +26,22 @@ Content-Type: application/json
 
 {"name": "Basket Weaving III", "accountId": ACCOUNT-ID}
 
+curl -X POST -H "Content-Type: application/json" -d "{\"name\": \"Basket Weaving III\", \"accountId\": 1}" registration-pal-fkrueger.apps.evans.pal.pivotal.io/projects
+
+
 ### Get projects
 GET {{registrationUrl}}/projects?accountId=ACCOUNT-ID
+
+curl registration-pal-fkrueger.apps.evans.pal.pivotal.io/projects?accountId=1
 
 ### Create allocation
 POST {{allocationsUrl}}/allocations
 Content-Type: application/json
 
 {"projectId": PROJECT-ID, "userId": USER-ID, "firstDay": "2015-05-17", "lastDay": "2015-05-18"}
+
+curl -X POST -H "Content-Type: application/json" -d "{\"projectId\": 1, \"userId\": 1, \"firstDay\": \"2015-05-17\", \"lastDay\": \"2015-05-18\"}" http://allocations-pal-fkrueger.apps.evans.pal.pivotal.io/allocations
+
 
 ### Get allocations
 GET {{allocationsUrl}}/allocations?projectId=PROJECT-ID
