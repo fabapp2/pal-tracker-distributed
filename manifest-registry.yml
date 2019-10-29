@@ -1,0 +1,10 @@
+applications:
+- name: tracker-service-registry
+  path: platform-services/eureka-server/build/libs/eureka-server.jar
+  routes:
+  - route: tracker-service-registry.apps.evans.pal.pivotal.io
+  memory: 1G
+  instances: 1
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+
